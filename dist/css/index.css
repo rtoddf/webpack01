@@ -1,0 +1,475 @@
+/*
+rem sizes:
+40px = 2.5rem
+30px = 1.875rem
+25px = 1.5625rem
+24px = 1.5rem
+20px = 1.25rem
+18px = 1.125rem
+16px = 1rem
+15px = .9375rem
+14px = 0.875rem
+13px = 0.8125rem
+12px = 0.75rem
+10px = 0.625rem
+6px = 0.375rem
+5px = 0.3125rem
+4px = 0.25rem
+
+1px = 0.0625rem */
+/* line 21, src/scss/layouts.scss */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  color: #222;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px; }
+
+/* line 29, src/scss/layouts.scss */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* line 35, src/scss/layouts.scss */
+body {
+  background-color: #333;
+  color: #fff;
+  font-size: 0.875rem; }
+
+/* line 41, src/scss/layouts.scss */
+img {
+  width: 100%;
+  border: 1px solid #222; }
+
+/* line 46, src/scss/layouts.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.625rem;
+  font-family: 'Average', serif;
+  font-weight: normal; }
+
+/* line 52, src/scss/layouts.scss */
+h2 {
+  font-size: 3.75rem;
+  margin: 20px 0;
+  border-bottom: 1px solid #fff; }
+
+/* line 58, src/scss/layouts.scss */
+h3 {
+  font-size: 1.5rem; }
+
+/* line 62, src/scss/layouts.scss */
+a {
+  color: #ccc; }
+
+/* line 66, src/scss/layouts.scss */
+p {
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem; }
+
+/* line 72, src/scss/layouts.scss */
+ul {
+  list-style: none; }
+
+/* line 76, src/scss/layouts.scss */
+li a {
+  background: rgba(200, 200, 200, 0.3);
+  border-bottom: 1px dotted #999; }
+
+/* line 81, src/scss/layouts.scss */
+pre {
+  padding: 10px;
+  background: #dedede;
+  border-radius: 6px;
+  font-size: 0.875rem; }
+
+/* line 88, src/scss/layouts.scss */
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+/* line 93, src/scss/layouts.scss */
+.grid {
+  display: grid;
+  display: -ms-grid;
+  grid-gap: 1.25rem;
+  width: 100%;
+  margin: 0 auto 1.875rem;
+  padding: 1.5625rem; }
+
+/* line 102, src/scss/layouts.scss */
+.grid > .grid {
+  width: 100%;
+  padding: 0; }
+
+/* line 107, src/scss/layouts.scss */
+article {
+  position: relative; }
+
+/* columns */
+/* line 112, src/scss/layouts.scss */
+.grid,
+.grid[data-col="1"] {
+  -ms-grid-columns: repeat(1, [col] 1fr);
+  grid-template-columns: repeat(1, [col] 1fr); }
+
+/* line 118, src/scss/layouts.scss */
+[data-col="2"] {
+  grid-template-columns: repeat(2, [col] 1fr);
+  -ms-grid-columns: repeat(2, [col] 1fr); }
+
+/* line 123, src/scss/layouts.scss */
+[data-col="3"],
+[data-col="1-2"],
+[data-col="2-1"] {
+  -ms-grid-columns: repeat(3, [col] 1fr);
+  grid-template-columns: repeat(3, [col] 1fr); }
+
+/* line 130, src/scss/layouts.scss */
+[data-col="4"],
+[data-col="1-3"],
+[data-col="3-1"],
+[data-col="2-1-1"],
+[data-col="1-2-1"],
+[data-col="1-1-2"] {
+  grid-template-columns: repeat(4, [col] 1fr); }
+
+/* line 139, src/scss/layouts.scss */
+[data-col="5"],
+[data-col="1-4"],
+[data-col="4-1"],
+[data-col="2-1-1-1"],
+[data-col="1-2-1-1"],
+[data-col="1-1-2-1"],
+[data-col="1-1-1-2"] {
+  grid-template-columns: repeat(5, [col] 1fr); }
+
+/* line 149, src/scss/layouts.scss */
+[data-col="6"],
+[data-col="3-1-1-1"],
+[data-col="1-3-1-1"],
+[data-col="1-1-3-1"],
+[data-col="1-1-1-3"] {
+  grid-template-columns: repeat(6, [col] 1fr); }
+
+/* line 157, src/scss/layouts.scss */
+[data-col="7"] {
+  grid-template-columns: repeat(7, [col] 1fr); }
+
+/* line 161, src/scss/layouts.scss */
+[data-col="8"] {
+  grid-template-columns: repeat(8, [col] 1fr); }
+
+/* line 165, src/scss/layouts.scss */
+[data-col="4-1-1-1-1"],
+[data-col="1-1-1-1-4"] {
+  grid-template-columns: repeat(8, [col] 1fr); }
+
+/* twos */
+/* line 171, src/scss/layouts.scss */
+[data-col="2-1"] > article:nth-child(1),
+[data-col="2-1"] > div:nth-child(1) {
+  grid-column: span 2; }
+
+/* line 176, src/scss/layouts.scss */
+[data-col="1-2"] > article:nth-child(2),
+[data-col="1-2"] > div:nth-child(2) {
+  grid-column: span 2; }
+
+/* line 181, src/scss/layouts.scss */
+[data-col="3-1"] > article:nth-child(1) {
+  grid-column: span 3; }
+
+/* line 185, src/scss/layouts.scss */
+[data-col="1-3"] > article:nth-child(2),
+[data-col="1-3"] > div:nth-child(2) {
+  grid-column: span 3; }
+
+/* line 190, src/scss/layouts.scss */
+[data-col="4-1"] > article:nth-child(1) {
+  grid-column: span 4; }
+
+/* line 194, src/scss/layouts.scss */
+[data-col="1-4"] > article:nth-child(2),
+[data-col="1-4"] > div:nth-child(2) {
+  grid-column: span 4; }
+
+/* threes */
+/* line 200, src/scss/layouts.scss */
+[data-col="2-1-1"] > article:nth-child(1) {
+  grid-column: span 2; }
+
+/* line 204, src/scss/layouts.scss */
+[data-col="1-2-1"] > article:nth-child(2) {
+  grid-column: span 2; }
+
+/* line 208, src/scss/layouts.scss */
+[data-col="1-1-2"] > article:nth-child(3) {
+  grid-column: span 2; }
+
+/* fours */
+/* line 213, src/scss/layouts.scss */
+[data-col="2-1-1-1"] > article:nth-child(1) {
+  grid-column: span 2; }
+
+/* line 217, src/scss/layouts.scss */
+[data-col="1-2-1-1"] > article:nth-child(2) {
+  grid-column: span 2; }
+
+/* line 221, src/scss/layouts.scss */
+[data-col="1-1-2-1"] > article:nth-child(3) {
+  grid-column: span 2; }
+
+/* line 225, src/scss/layouts.scss */
+[data-col="1-1-1-2"] > article:nth-child(4) {
+  grid-column: span 2; }
+
+/* line 229, src/scss/layouts.scss */
+[data-col="3-1-1-1"] > article:nth-child(1) {
+  grid-column: span 3; }
+
+/* line 233, src/scss/layouts.scss */
+[data-col="1-3-1-1"] > article:nth-child(2) {
+  grid-column: span 3; }
+
+/* line 237, src/scss/layouts.scss */
+[data-col="1-1-3-1"] > article:nth-child(3) {
+  grid-column: span 3; }
+
+/* line 241, src/scss/layouts.scss */
+[data-col="1-1-1-3"] > article:nth-child(4) {
+  grid-column: span 3; }
+
+/* fives */
+/* line 246, src/scss/layouts.scss */
+[data-col="4-1-1-1-1"] > article:nth-child(1) {
+  grid-column: span 4; }
+
+/* line 250, src/scss/layouts.scss */
+[data-col="1-1-1-1-4"] > article:nth-child(5) {
+  grid-column: span 4; }
+
+/* combinations */
+/* line 256, src/scss/layouts.scss */
+[data-col="4x2"][data-layout="1-4-1"] {
+  grid-template-columns: repeat(6, [col] 1fr); }
+
+/* line 260, src/scss/layouts.scss */
+[data-col="4x2"][data-layout="1-4-1"] article:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3; }
+
+/* line 265, src/scss/layouts.scss */
+[data-col="4x2"][data-layout="1-4-1"] article:nth-child(2) {
+  grid-column: 5 / 7;
+  grid-row: 1 / 3; }
+
+/* line 270, src/scss/layouts.scss */
+[data-col="4x2"][data-layout="4-1-4"] {
+  grid-template-columns: repeat(6, [col] 1fr); }
+
+/* line 274, src/scss/layouts.scss */
+[data-col="4x2"][data-layout="4-1-4"] article:nth-child(1) {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3; }
+
+/* line 280, src/scss/layouts.scss */
+[data-col="3x2x1"] {
+  grid-template-columns: repeat(6, [col] 1fr);
+  grid-gap: 1.25rem; }
+
+/* line 285, src/scss/layouts.scss */
+[data-col="3x2x1"] article:nth-child(1) {
+  grid-column: span 3; }
+
+/* line 289, src/scss/layouts.scss */
+[data-col="3x2x1"] article:nth-child(2) {
+  grid-column: span 2; }
+
+/* line 293, src/scss/layouts.scss */
+[data-col="3x2x1"] article:nth-child(3) {
+  grid-column: span 1; }
+
+/* line 297, src/scss/layouts.scss */
+[data-col="3x2x1"] article:nth-child(4) {
+  grid-column: span 1; }
+
+/* line 301, src/scss/layouts.scss */
+[data-col="3x2x1"] article:nth-child(5) {
+  grid-column: span 3; }
+
+/* line 305, src/scss/layouts.scss */
+[data-col="3x2x1"] article:nth-child(6) {
+  grid-column: span 2; }
+
+/* line 311, src/scss/layouts.scss */
+[data-col="3x2x1"] [data-image-layout="square"]:after {
+  padding-top: 50%; }
+
+/* line 315, src/scss/layouts.scss */
+[data-col="3x2x1"] .tile {
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
+
+/* end combinations */
+/* line 322, src/scss/layouts.scss */
+figure .filler {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  padding-bottom: 56%;
+  overflow: hidden;
+  background: #222; }
+
+/* line 332, src/scss/layouts.scss */
+figure .filler > img {
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: auto;
+  max-width: 102%;
+  height: 102%;
+  max-height: 102%;
+  -webkit-transform: translate(-50%, -25%);
+  -ms-transform: translate(-50%, -25%);
+  transform: translate(-50%, -25%);
+  text-align: center; }
+
+/* line 347, src/scss/layouts.scss */
+figcaption {
+  margin: 0.3125rem auto 0;
+  color: #888;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1rem; }
+
+/* media queries */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* line 357, src/scss/layouts.scss */
+  [data-col="4"],
+  [data-col="6"] {
+    grid-template-columns: repeat(2, [col] 1fr); }
+  /* line 363, src/scss/layouts.scss */
+  [data-col="4x2"][data-layout="1-4-1"] article:nth-child(1),
+  [data-col="4x2"][data-layout="4-1-4"] article:nth-child(1) {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1; }
+  /* line 369, src/scss/layouts.scss */
+  [data-col="4x2"][data-layout="1-4-1"] article:nth-child(2) {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1; } }
+
+@media (max-width: 1024px) {
+  /* line 376, src/scss/layouts.scss */
+  [data-col="1-2"],
+  [data-col="2-1"],
+  [data-col="1-3"],
+  [data-col="3-1"],
+  [data-col="1-4"],
+  [data-col="4-1"],
+  [data-col="4-1-1-1-1"],
+  [data-col="1-1-1-1-4"] {
+    grid-template-columns: repeat(2, [col] 1fr); }
+  /* line 387, src/scss/layouts.scss */
+  [data-col="2-1"] > article:nth-child(1),
+  [data-col="1-2"] > article:nth-child(2),
+  [data-col="3-1"] > article:nth-child(1),
+  [data-col="1-3"] > article:nth-child(2),
+  [data-col="4-1"] > article:nth-child(1),
+  [data-col="1-4"] > article:nth-child(2) {
+    grid-column: span 1; }
+  /* line 396, src/scss/layouts.scss */
+  [data-col="4-1-1-1-1"] > article:nth-child(1) {
+    grid-column: span 2; }
+  /* line 400, src/scss/layouts.scss */
+  [data-col="1-1-1-1-4"] > article:nth-child(5) {
+    grid-column: span 2; } }
+
+@media (min-width: 480px) and (max-width: 768px) {
+  /* line 406, src/scss/layouts.scss */
+  [data-col="5"] {
+    grid-template-columns: repeat(2, [col] 1fr); }
+  /* line 410, src/scss/layouts.scss */
+  [data-col="5"] > article:nth-child(1) {
+    grid-column: span 2; } }
+
+@media (max-width: 768px) {
+  /* line 416, src/scss/layouts.scss */
+  [data-col="2-1-1"] > article:nth-child(1) {
+    grid-column: span 4; }
+  /* line 420, src/scss/layouts.scss */
+  [data-col="2-1-1"] > article:nth-child(2),
+  [data-col="2-1-1"] > article:nth-child(3) {
+    grid-column: span 2; }
+  /* line 425, src/scss/layouts.scss */
+  [data-col="1-2-1"] > article:nth-child(2) {
+    grid-column: col / span 4;
+    order: 1; }
+  /* line 430, src/scss/layouts.scss */
+  [data-col="1-2-1"] > article:nth-child(1) {
+    grid-column: span 2; }
+  /* line 434, src/scss/layouts.scss */
+  [data-col="1-2-1"] > article:nth-child(3) {
+    grid-column: span 2; }
+  /* line 438, src/scss/layouts.scss */
+  [data-col="1-1-2"] > article:nth-child(1),
+  [data-col="1-1-2"] > article:nth-child(2) {
+    grid-column: span 2; }
+  /* line 443, src/scss/layouts.scss */
+  [data-col="1-1-2"] > article:nth-child(3) {
+    grid-column: span 4; } }
+
+@media (max-width: 600px) {
+  /* line 449, src/scss/layouts.scss */
+  .container {
+    width: 100%;
+    padding: 0; }
+  /* line 454, src/scss/layouts.scss */
+  .grid[data-margin="0"] {
+    width: 100%;
+    padding: 0; }
+  /* line 459, src/scss/layouts.scss */
+  [data-col="2"],
+  [data-col="3"],
+  [data-col="4"],
+  [data-col="6"],
+  [data-col="7"],
+  [data-col="8"],
+  [data-col="4x2"][data-layout="1-4-1"],
+  [data-col="4x2"][data-layout="4-1-4"] {
+    grid-template-columns: repeat(1, [col] 1fr); }
+  /* line 470, src/scss/layouts.scss */
+  [data-col="4x2"][data-layout="1-4-1"] article:nth-child(1),
+  [data-col="4x2"][data-layout="1-4-1"] article:nth-child(2),
+  [data-col="4x2"][data-layout="4-1-4"] article:nth-child(1) {
+    grid-column: auto;
+    grid-row: auto; } }
+
+@media (max-width: 480px) {
+  /* line 479, src/scss/layouts.scss */
+  [data-col="5"],
+  [data-col="2-1-1"],
+  [data-col="1-2-1"],
+  [data-col="1-1-2"],
+  [data-col="4-1-1-1-1"],
+  [data-col="1-1-1-1-4"] {
+    grid-template-columns: repeat(1, [col] 1fr); }
+  /* line 488, src/scss/layouts.scss */
+  [data-col="5"] > article:nth-child(1),
+  [data-col="2-1-1"] > article:nth-child(1),
+  [data-col="2-1-1"] > article:nth-child(2),
+  [data-col="2-1-1"] > article:nth-child(3),
+  [data-col="1-2-1"] > article:nth-child(1),
+  [data-col="1-2-1"] > article:nth-child(2),
+  [data-col="1-2-1"] > article:nth-child(3),
+  [data-col="1-1-2"] > article:nth-child(1),
+  [data-col="1-1-2"] > article:nth-child(2),
+  [data-col="1-1-2"] > article:nth-child(3),
+  [data-col="4-1-1-1-1"] > article:nth-child(1),
+  [data-col="1-1-1-1-4"] > article:nth-child(5) {
+    grid-column: span 1; } }
+
+/*# sourceMappingURL=index.css.map */

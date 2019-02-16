@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "story.css",
+	"sources": [
+		"../src/scss/story.scss",
+		"../src/scss/story01.scss"
+	],
+	"sourcesContent": [
+		"@import \"./story01.scss\";",
+		"body {\n    h1 {\n        color: purple;\n    }\n}"
+	],
+	"names": [],
+	"mappings": ";ACAA,AACI,IADA,CACA,EAAE,CAAC;EACC,KAAK,EAAE,MAAM,GAChB"
+}
