@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start:dev": "webpack-dev-server"
+    "start:dev": "webpack-dev-server --watch"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
   "homepage": "https://github.com/rtoddf/webpack01#readme",
   "dependencies": {
     "d3": "^5.9.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
     "sass-webpack-plugin": "^1.0.3",
     "webpack": "^4.29.4",
     "webpack-cli": "^3.2.3",

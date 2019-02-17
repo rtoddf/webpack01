@@ -7,8 +7,8 @@
 	],
 	"sourcesContent": [
 		"@import \"./story01.scss\";",
-		"body {\n    h1 {\n        color: purple;\n    }\n}"
+		"body {\n    h1 {\n        color: green;\n    }\n}"
 	],
 	"names": [],
-	"mappings": ";ACAA,AACI,IADA,CACA,EAAE,CAAC;EACC,KAAK,EAAE,MAAM,GAChB"
+	"mappings": ";ACAA,AACI,IADA,CACA,EAAE,CAAC;EACC,KAAK,EAAE,KAAK,GACf"
 }

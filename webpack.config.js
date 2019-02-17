@@ -10,6 +10,7 @@ module.exports = function (prod) {
         plugins: [
             new SassPlugin({'./src/scss/index.scss': 'css/index.css'}),
             new SassPlugin({'./src/scss/story.scss': 'css/story.css'}),
+            new SassPlugin({'./src/scss/layouts.scss': 'css/layouts.css'}),
             // new SassPlugin({'./src/section/_section.scss': 'css/section.css'}),
             // new SassPlugin({'./src/media/_media.scss': 'css/media.css'}),
             // new SassPlugin({'./src/components/footer/_footer.scss': 'css/footer.css'}),
