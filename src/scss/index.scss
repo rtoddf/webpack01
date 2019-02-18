@@ -1,7 +1,5 @@
-@import "./layouts.scss";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Average');
 
-body {
-    background-color: green;
-    color: #fff;
-    font-size: 0.875rem;
-}
+@import "./layouts.scss";
+@import "./displays.scss";

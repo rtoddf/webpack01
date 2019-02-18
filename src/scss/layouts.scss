@@ -33,7 +33,7 @@ html {
 }
 
 body {
-    background-color: #f0f;
+    background-color: #333;
     color: #fff;
     font-size: 0.875rem;
 }
@@ -50,9 +50,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: 3.75rem;
-    margin: 20px 0;
+    margin: 30px 0 40px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.75rem;
+    letter-spacing: 1rem;
+    text-align: center;
 }
 
 h3 {
@@ -71,11 +75,13 @@ p {
 
 ul {
     list-style: none;
-}
 
-li a {
-    background: rgba(200,200,200, .3);
-    border-bottom: 1px dotted #999;
+    li {
+        a {
+            background: rgba(200,200,200, .3);
+            border-bottom: 1px dotted #999;
+        }
+    }
 }
 
 pre {
@@ -93,15 +99,15 @@ pre {
 .grid {
     display: grid;
     display: -ms-grid;
-    grid-gap: 1.25rem;
+    grid-gap: 2.5rem;
     width: 100%;
     margin: 0 auto 1.875rem;
-    padding: 1.5625rem;
-}
-
-.grid > .grid {
-    width: 100%;
     padding: 0;
+
+    > .grid {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 article {
@@ -319,29 +325,31 @@ article {
 
 /* end combinations */
 
-figure .filler {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    max-height: 100%;
-    padding-bottom: 56%;
-    overflow: hidden;
-    background: #222;
-}
+figure {
+    .filler {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-height: 100%;
+        padding-bottom: 56%;
+        overflow: hidden;
+        background: #222;
 
-figure .filler > img {
-    display: block;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    width: auto;
-    max-width: 102%;
-    height: 102%;
-    max-height: 102%;
-    -webkit-transform: translate(-50%, -25%);
-    -ms-transform: translate(-50%, -25%);
-    transform: translate(-50%, -25%);
-    text-align: center;
+        > img {
+            display: block;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            width: auto;
+            max-width: 102%;
+            height: 102%;
+            max-height: 102%;
+            -webkit-transform: translate(-50%, -25%);
+            -ms-transform: translate(-50%, -25%);
+            transform: translate(-50%, -25%);
+            text-align: center;
+        }
+    }
 }
 
 figcaption {

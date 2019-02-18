@@ -21,6 +21,10 @@ module.exports = function (prod) {
             path: path.join(__dirname, 'dist'),
             filename: 'js/[name].min.js'
         },
+        devServer: {
+            contentBase: path.join(__dirname, 'dist'),
+            port: 8080
+        },
         // module: {
         //     rules: [{
         //         test: /\.js$/,
