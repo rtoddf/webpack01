@@ -4,7 +4,7 @@ const SassPlugin = require('sass-webpack-plugin');
 module.exports = function (prod) {
     let config = {
         entry: {
-            output: './src/js/index.js',
+            index: './src/js/index.js',
             story: './src/js/story.js',
         },
         plugins: [
@@ -34,7 +34,7 @@ module.exports = function (prod) {
         //         }
         //     }]
         // },
-        // mode: prod ? 'production' : 'development'
+        mode: prod ? 'production' : 'development'
     };
 
     if (!prod) {
